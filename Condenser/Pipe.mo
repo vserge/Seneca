@@ -1,4 +1,5 @@
 within Seneca.Condenser;
+
 connector Pipe
   extends Gas_Flow;
   Gas_Flow mf;

@@ -1,4 +1,5 @@
 within Seneca.Condenser;
+
 record Gas_Flow
   Real mass_flow;
   Real h2s;

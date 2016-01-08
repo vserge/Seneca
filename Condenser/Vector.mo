@@ -1,4 +1,5 @@
 within Seneca.Condenser;
+
 record Vector
   Real x;
   Real y;
