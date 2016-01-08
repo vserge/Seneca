@@ -1,3 +1,4 @@
+within Seneca.Common;
 model FluidPort_FUEL "Это модель источника газа для горения в печи дожига"
   extends Modelica.Fluid.Interfaces.FluidPort;
   parameter Real C3H8_m "Массовая доля Пропана";

@@ -1,3 +1,4 @@
+within Seneca.Condenser;
 partial model Sulfur_Seal_pipes
   //extends Pipe;
   Pipe in_seal annotation(Placement(transformation(extent = {{-10, 90}, {10, 70}}, rotation = 0)));

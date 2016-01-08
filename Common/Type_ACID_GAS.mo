@@ -1,3 +1,4 @@
+within Seneca.Common;
 record Type_ACID_GAS
   parameter Real O2_m(start = 0.21) "Массовая доля кислорода";
   parameter Real O2_v "Объемная доля кислорода";

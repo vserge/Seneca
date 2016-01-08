@@ -1,3 +1,4 @@
+within Seneca.Condenser;
 class Condenser
   extends Condenser_pipes;
   extends Gas_Flow;

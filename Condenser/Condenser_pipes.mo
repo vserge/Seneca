@@ -1,3 +1,4 @@
+within Seneca.Condenser;
 partial model Condenser_pipes
   //extends Pipe;
   extends Gas_Flow;

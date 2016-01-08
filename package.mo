@@ -1,12 +1,13 @@
 within ;
-package Seneca "Library of Sulfur simulation models (version 0.0.1)"
+encapsulated package Seneca "Библиотека для моделирования процесса очистки серы (Версия 0.0.1)/Library of Sulfur simulation models (version 0.0.1)"
+  extends Modelica.Icons.Package;
+
   package UsersGuide "User's Guide/Руководство пользователя"
     extends Modelica.Icons.Information;
 
-  class Overview "Overview"
-    extends Modelica.Icons.Information;
-
-   annotation (Documentation(info="<html>
+    class Overview "Overview"
+      extends Modelica.Icons.Information;
+      annotation(Documentation(info = "<html>
 <p>Библиотека Seneca предоставляет набор моделей для моделирования и исследования процессов очистки серы.</p>
 <table cellspacing=\"0\" cellpadding=\"2\" border=\"1\"><tr>
 <td><p align=\"center\"><h4>Элементы библиотеки</h4></p></td>
@@ -14,12 +15,11 @@ package Seneca "Library of Sulfur simulation models (version 0.0.1)"
 </tr>
 </table>
 </html>"));
-  end Overview;
+    end Overview;
 
-  class Connectors "Connectors"
-    extends Modelica.Icons.Information;
-
-   annotation (Documentation(info="<html>
+    class Connectors "Connectors"
+      extends Modelica.Icons.Information;
+      annotation(Documentation(info = "<html>
 <p>The Chemical defines the two important <b>elementary connectors</b> for substance and for solution:</p>
 <table cellspacing=\"0\" cellpadding=\"1\" border=\"1\"><tr>
 <td valign=\"top\"></td>
@@ -47,48 +47,44 @@ package Seneca "Library of Sulfur simulation models (version 0.0.1)"
 </tr>
 </table>
 </html>"));
-  end Connectors;
+    end Connectors;
 
-  package ReleaseNotes "Release notes"
-    extends Modelica.Icons.ReleaseNotes;
+    package ReleaseNotes "Release notes"
+      extends Modelica.Icons.ReleaseNotes;
 
-  class Version_0_1 "Version 0.0.1 (Dec. 10, 2015)"
-    extends Modelica.Icons.ReleaseNotes;
-
-  annotation (Documentation(info="<html>
+      class Version_0_0_1 "Version 0.0.1 (Dec. 10, 2015)"
+        extends Modelica.Icons.ReleaseNotes;
+        annotation(Documentation(info = "<html>
 <ul>
-<li>Основые коды бибилиотеки расположены по адресу https://github.com/vserge/SENECA </li>
+<li>Основые коды бибилиотеки расположены по адресу https://github.com/vserge/Seneca </li>
 <li><font style=\"color: #333333; \">Components for solution, substance, chemical reaction, diffusion, gas dissolution, semipermeable membranes, chemical speciation of macromolecules, ..</font></li>
 <li><font style=\"color: #333333; \">The library uses the Modelica Standard Libary (MSL) version 3.2.</font></li>
 </ul>
 </html>"));
-  end Version_0_1;
+      end Version_0_0_1;
+    end ReleaseNotes;
 
-  end ReleaseNotes;
-
-  class Contact "Contact"
-    extends Modelica.Icons.Contact;
-
-   annotation (Documentation(info="<html>
+    class Contact "Contact"
+      extends Modelica.Icons.Contact;
+      annotation(Documentation(info = "<html>
 <p>Компания Стинс Коман</p>
 <p>Sergey Volkov</p>
 <p>email: svolkov@stinscoman.com</p>
 </html>"));
-
-  end Contact;
+    end Contact;
 
     class License "Modelica License"
-       extends Modelica.Icons.Information;
-      annotation (Documentation(info="<html>
+      extends Modelica.Icons.Information;
+      annotation(Documentation(info = "<html>
 <p>Все права на данные материалы принадлежат компании Стинс Коман</p>
 <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &QUOT;AS IS&QUOT; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 </html>"));
     end License;
 
-  class NewRelease "Publishing new release"
-    extends Modelica.Icons.Information;
-
-   annotation (Documentation(info="<html>
+    class NewRelease "Publishing new release"
+      extends Modelica.Icons.Information;
+      annotation(Documentation(info = "<html>
+<p><br>Все версии библиотеки нумеруются в соответствии с правилами Семантического версионирования 2.0.0, которое доступно по ссылке <a href=\"http://semver.org/\">semver.org</a>. </p>
 <p><br>New release must be numbered by Semantic Versioning 2.0.0, see <a href=\"http://semver.org/\">semver.org</a>. </p>
 <p><br>If minor version, then the conversion script must be written and connected with package Chemical using &QUOT;annotation(conversion(from(version=..)))&QUOT;! </p>
 <p><br>To clean the code from dummy annotations try to use script <a href=\"https://github.com/dietmarw/trimtrailingwhitespaces\">ttws</a>. </p>
@@ -111,14 +107,10 @@ package Seneca "Library of Sulfur simulation models (version 0.0.1)"
 https://github.com/xogeny/impact/blob/master/resources/docs/modelica2015/paper/impact.md#impact-on-library-developers\">release from &QUOT;master&QUOT;</a> branch with number &QUOT;vX.Y.Z&QUOT; and with release notes. </li>
 </ul>
 </html>"));
-  end NewRelease;
-
-  annotation (DocumentationClass=true, Documentation(info="<html>
+    end NewRelease;
+    annotation(DocumentationClass = true, Documentation(info = "<html>
 <p>Package <b>Seneca </b>is a modelica package for <b>Sulfur Clauss processes </b>. It provides connectors and model components fitted for Sulfur Clauss models. </p>
 </html>"));
   end UsersGuide;
-
-
- extends Modelica.Icons.Package;
-
+  annotation(version = "0.0.1", Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
 end Seneca;

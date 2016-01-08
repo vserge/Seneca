@@ -1,3 +1,4 @@
+within Seneca.Condenser;
 model Condenser_III
   extends Condenser_C_pipes;
   extends Condenser_C;

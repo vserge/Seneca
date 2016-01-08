@@ -1,3 +1,4 @@
+within Seneca.Common;
 model FluidPort_ACIDGAS
   extends Modelica.Fluid.Interfaces.FluidPort;
   parameter Real H2S_m "Массовая доля Сероводорода";

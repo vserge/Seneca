@@ -1,3 +1,4 @@
+within Seneca.Condenser;
 partial model ABO_pipes
   //extends Pipe;
   Pipe out_ABO annotation(Placement(transformation(extent = {{70, 10}, {50, -10}}, rotation = 0)));
