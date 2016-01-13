@@ -1,0 +1,11 @@
+within Seneca.Common;
+
+package ACIDGas "Определение проектной смеси для установки по очистке серы"
+  extends Common.MixtureGasNasa(mediumName = "ACIDGas", data = {Common.SingleGasesData.H2S, Common.SingleGasesData.SO2, Common.SingleGasesData.H2O, Common.SingleGasesData.O2, Common.SingleGasesData.N2, Common.SingleGasesData.H2, Common.SingleGasesData.CO, Common.SingleGasesData.CO2, Common.SingleGasesData.COS, Common.SingleGasesData.CS2, Common.SingleGasesData.CH4, Common.SingleGasesData.C2H6, Common.SingleGasesData.C3H3, Common.SingleGasesData.IC4H10, Common.SingleGasesData.NC4H10, Common.SingleGasesData.IC5H12, Common.SingleGasesData.NC3H12, Common.SingleGasesData.C6, Common.SingleGasesData.NH3, Common.SingleGasesData.S1, Common.SingleGasesData.S2, Common.SingleGasesData.S3, Common.SingleGasesData.S4, Common.SingleGasesData.S5, Common.SingleGasesData.S6, Common.SingleGasesData.S7, Common.SingleGasesData.S8}, fluidConstants = {Common.FluidData.H2S, Common.FluidData.SO2, Common.FluidData.H2O, Common.FluidData.O2, Common.FluidData.N2, Common.FluidData.H2, Common.FluidData.CO, Common.FluidData.CO2, Common.FluidData.COS, Common.FluidData.CS2, Common.FluidData.CH4, Common.FluidData.C2H6, Common.FluidData.C3H3, Common.FluidData.IC4H10, Common.FluidData.NC4H10, Common.FluidData.IC5H12, Common.FluidData.NC3H12, Common.FluidData.C6, Common.FluidData.NH3, Common.FluidData.S1, Common.FluidData.S2, Common.FluidData.S3, Common.FluidData.S4, Common.FluidData.S5, Common.FluidData.S6, Common.FluidData.S7, Common.FluidData.S8}, substanceNames = {"H2S", "SO2,", "H2O", "O2", "N2", "H2", "CO"}, reference_X = {0.768, 0.0, 0.0, 0.232, 0.0, 0.0});
+  annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
+<p>
+Настоящая модель описывает состав кислого газа, который подается на установку.
+Весь этот поток контролируется и анализируется на все устройствах опытной установки
+</p>
+</html>"));
+end ACIDGas;

@@ -30,12 +30,12 @@ model FluidPort_ACIDGAS
   parameter Real CS2_v "Объемная доля Сероуглерод";
   parameter Real T_ACID "Температура кислого газа";
   /* stream Medium.MassFraction Xi_outflow[Medium.nXi] "Independent mixture mass fractions m_i/m close to the connection point if m_flow < 0";
-                                                          Этот вектор должен быть приязан ко всех характеристикам перечисленным выше
+                                                                                                    Этот вектор должен быть приязан ко всех характеристикам перечисленным выше
 
-                                                          Вектор теплоемкости
-                                                          stream Medium.ExtraProperty C_outflow[Medium.nC] "Properties c_i/m close to the connection point if m_flow < 0";
-                                                          должен быть заполнен!!!
+                                                                                                    Вектор теплоемкости
+                                                                                                    stream Medium.ExtraProperty C_outflow[Medium.nC] "Properties c_i/m close to the connection point if m_flow < 0";
+                                                                                                    должен быть заполнен!!!
 
-                                                            */
+                                                                                                      */
   annotation(defaultComponentName = "port_ACID_GAS", Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Ellipse(lineColor = {255, 0, 0}, fillColor = {0, 0, 255}, fillPattern = FillPattern.Solid, extent = {{30, -30}, {-30, 30}}, endAngle = 360)}), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Ellipse(origin = {-12, 27}, lineColor = {255, 2, 0}, fillColor = {0, 0, 255}, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-22, 23}, {34, -33}}, endAngle = 360), Text(origin = {-5, 62}, extent = {{-29, 12}, {29, -12}}, textString = "%name")}));
 end FluidPort_ACIDGAS;
