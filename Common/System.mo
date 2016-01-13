@@ -1,6 +1,7 @@
 within Seneca.Common;
 
 model System "Свойства системы и значения по умолчанию для модели (окружающая среда, направленность потока, Инициализации, Параметры установки)"
+  // Medium = Modelica.Media.Interfaces.PartialMedium "Medium model для значений по умолчанию потоков" annotation(choicesAllMatching = true);
   parameter Modelica.SIunits.AbsolutePressure p_ambient = 101325 "Давление окружающей среды по умолчанию" annotation(Dialog(group = "Окружающая среда"));
   parameter Modelica.SIunits.Temperature T_ambient = 293.15 "Температура окружающей среды по умолчанию" annotation(Dialog(group = "Окружающая среда"));
   parameter Modelica.SIunits.Acceleration g = Modelica.Constants.g_n "Константа ускорения свободного падения" annotation(Dialog(group = "Окружающая среда"));
