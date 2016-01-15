@@ -4,8 +4,8 @@ model Block_Prep_ASIDGAS
   Common.System system annotation(Placement(visible = true, transformation(origin = {-178, 178}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   //Разделитель жидкости и газа (брызгоуловитель)
   /*
-           Здесь должен быть датчик уровня жидкости нужно его вытащить из модели model PartialLumpedVessel
-          */
+                                     Здесь должен быть датчик уровня жидкости нужно его вытащить из модели model PartialLumpedVessel
+                                    */
   //Датчики
   Modelica.Fluid.Sources.MassFlowSource_T boundary annotation(Placement(visible = true, transformation(origin = {-173, 113}, extent = {{-11, -11}, {11, 11}}, rotation = 0)));
   // Трубопроводы
