@@ -1,0 +1,7 @@
+within Seneca.BlockModels;
+
+model Block_FinalFurneces
+  Modelica.Fluid.Interfaces.FluidPort_a port_a annotation(Placement(visible = true, transformation(origin = {-100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Fluid.Interfaces.FluidPort_b port_b annotation(Placement(visible = true, transformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {101, 10}, extent = {{-9, -10}, {9, 10}}, rotation = 0)));
+  annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {3, 89}, extent = {{-101, 1}, {93, -1}}, textString = "Блок дожига", fontSize = 40), Rectangle(origin = {-6, 2}, lineThickness = 3, borderPattern = BorderPattern.Engraved, extent = {{-94, 98}, {106, -102}}, radius = 3), Text(origin = {-1, -7}, lineColor = {255, 0, 0}, extent = {{-95, 87}, {95, -87}}, textString = "B_FF", fontSize = 250)}), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+end Block_FinalFurneces;

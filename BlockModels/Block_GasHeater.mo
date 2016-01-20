@@ -1,5 +1,7 @@
 within Seneca.BlockModels;
 
 model Block_GasHeater
-  annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  Modelica.Fluid.Interfaces.FluidPort_a port_a annotation(Placement(visible = true, transformation(origin = {-100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Fluid.Interfaces.FluidPort_b port_b annotation(Placement(visible = true, transformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(extent = {{-42, 34}, {-42, 34}}), Text(origin = {-32, 64}, extent = {{-68, 34}, {130, 18}}, textString = "Блок нагрева кислого газа", fontSize = 40), Rectangle(origin = {-18, 17}, lineThickness = 3, borderPattern = BorderPattern.Engraved, extent = {{-82, 83}, {118, -117}}, radius = 2), Text(origin = {0, 3}, lineColor = {255, 0, 0}, extent = {{-86, 73}, {90, -83}}, textString = "B_GH")}), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
 end Block_GasHeater;
