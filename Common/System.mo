@@ -2,9 +2,9 @@ within Seneca.Common;
 
 model System "Свойства системы и значения по умолчанию для модели (окружающая среда, направленность потока, Инициализации, Параметры установки)"
   // Medium = Modelica.Media.Interfaces.PartialMedium "Medium model для значений по умолчанию потоков" annotation(choicesAllMatching = true);
-  parameter Modelica.SIunits.AbsolutePressure p_ambient = 101325 "Давление окружающей среды по умолчанию" annotation(Dialog(group = "Окружающая среда"));
-  parameter Modelica.SIunits.Temperature T_ambient = 293.15 "Температура окружающей среды по умолчанию" annotation(Dialog(group = "Окружающая среда"));
-  parameter Modelica.SIunits.Acceleration g = Modelica.Constants.g_n "Константа ускорения свободного падения" annotation(Dialog(group = "Окружающая среда"));
+  parameter Modelica.SIunits.AbsolutePressure p_ambient = 101325 "Давление окружающей среды по умолчанию" annotation(Dialog(group = "Окружающаясреда"));
+  parameter Modelica.SIunits.Temperature T_ambient = 293.15 "Температура окружающей среды по умолчанию" annotation(Dialog(group = "Окружающаясреда"));
+  parameter Modelica.SIunits.Acceleration g = Modelica.Constants.g_n "Константа ускорения свободного падения" annotation(Dialog(group = "Окружающаясреда"));
   // Допущения
   parameter Boolean allowFlowReversal = false "управление направлением потока: значение=false для предотвращения возврата потока (port_a -> port_b)" annotation(Dialog(tab = "Допущения"), Evaluate = true);
   parameter Modelica.Fluid.Types.Dynamics energyDynamics = Modelica.Fluid.Types.Dynamics.DynamicFreeInitial "Определение по умолчанию энергобаланса" annotation(Evaluate = true, Dialog(tab = "Допущения", group = "Динамика"));
