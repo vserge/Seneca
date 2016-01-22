@@ -1,0 +1,14 @@
+within Seneca.Reactor;
+
+model BaseReactor "Базовая модель реактора"
+  Modelica.Fluid.Interfaces.FluidPort_a port_a annotation(Placement(visible = true, transformation(origin = {0, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {0, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Fluid.Interfaces.FluidPort_b port_b annotation(Placement(visible = true, transformation(origin = {0, -102}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {0, -102}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  // port_s - это порт вывода жидкой серы, он работает только во втором реакторе, т.е. когда температура реактора ниже 190 градусов
+  Modelica.Fluid.Interfaces.FluidPort_b port_s annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {60, -68}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealOutput port_t "сигнал измерения температуры" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {70, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+  //Вызов функции из матлаба для расчета характеристик реактора
+  port_a.t = port_t;
+  //Если реактора горячий, то port_s не используется
+  annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(extent = {{-60, 80}, {60, -80}}), Rectangle(origin = {0, 89}, lineColor = {0, 0, 255}, fillColor = {0, 0, 255}, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-20, 11}, {20, -9}}), Rectangle(origin = {0, -90}, lineColor = {0, 0, 255}, fillColor = {0, 0, 255}, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-20, 10}, {20, -10}}), Text(origin = {8, -11}, lineColor = {255, 0, 0}, extent = {{-68, 89}, {50, -67}}, textString = "%name", fontSize = 60)}), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, -1}, lineThickness = 1, extent = {{-80, 101}, {80, -99}}), Rectangle(origin = {1, 50}, extent = {{-81, 30}, {79, -30}}), Text(origin = {-2, 0}, extent = {{-72, 74}, {76, 24}}, textString = "Зона первого катализатора", fontSize = 40), Rectangle(origin = {1, -50}, extent = {{-81, 30}, {79, -30}}), Text(origin = {-2, -98}, extent = {{-72, 74}, {76, 24}}, textString = "Зона второго катализатора\n и отвода тепла", fontSize = 40)}));
+end BaseReactor;
