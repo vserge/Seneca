@@ -3,8 +3,8 @@ within Seneca.Examples;
 model General_Model_OY "Общая модель установки по очистке серы"
   import Modelica.Fluid.Sources;
   /*
-                                                                                                                                                                                                    Это комплексная модель установки, которая использует все наработки этой бибилиотеки
-                                                                                                                                                                                                    */
+                                                                                                                                                                                                          Это комплексная модель установки, которая использует все наработки этой бибилиотеки
+                                                                                                                                                                                                          */
   Sources.MassFlowSource_T acidGas "Источник кислого газа" annotation(Placement(visible = true, transformation(origin = {-537, 161}, extent = {{-49, -49}, {49, 49}}, rotation = 0)));
   Sources.FixedBoundary airTube(nPorts = 1) "Труба" annotation(Placement(visible = true, transformation(origin = {633, 169}, extent = {{-57, -67}, {57, 67}}, rotation = 180)));
   BlockModels.Block_FinalFurneces block_FinalFurneces1 annotation(Placement(visible = true, transformation(origin = {400, 158}, extent = {{-76, -76}, {76, 76}}, rotation = 0)));
