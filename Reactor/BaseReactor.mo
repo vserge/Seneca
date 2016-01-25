@@ -4,8 +4,8 @@ model BaseReactor "Базовая модель реактора"
   Modelica.Fluid.Interfaces.FluidPort_a port_a annotation(Placement(visible = true, transformation(origin = {0, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {0, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Fluid.Interfaces.FluidPort_b port_b annotation(Placement(visible = true, transformation(origin = {0, -102}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {0, -102}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   // port_s - это порт вывода жидкой серы, он работает только во втором реакторе, т.е. когда температура реактора ниже 190 градусов
-  Modelica.Fluid.Interfaces.FluidPort_b port_s annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {60, -68}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Interfaces.RealOutput port_t "сигнал измерения температуры" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {70, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Common.SulfurPort_b sulfurPort_b1 annotation(Placement(visible = true, transformation(origin = {100, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
   //Вызов функции из матлаба для расчета характеристик реактора
   port_a.t = port_t;
