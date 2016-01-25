@@ -12,10 +12,17 @@ model Block_Reactors
   Block_GasHeater block_GasHeater1 annotation(Placement(visible = true, transformation(origin = {-369, -239}, extent = {{-61, -61}, {61, 61}}, rotation = 0)));
   Pipes.BasePipe basePipe4 annotation(Placement(visible = true, transformation(origin = {-236, -228}, extent = {{-49, -49}, {49, 49}}, rotation = 0)));
   Valve.valves_4ways valves_4ways1 annotation(Placement(visible = true, transformation(origin = {-44, 40}, extent = {{-68, -68}, {68, 68}}, rotation = 0)));
-  Reactor.BaseReactor baseReactor2 annotation(Placement(visible = true, transformation(origin = {176, -168}, extent = {{-105, -105}, {105, 105}}, rotation = 0)));
+  Reactor.BaseReactor baseReactor2 annotation(Placement(visible = true, transformation(origin = {186, -242}, extent = {{-105, -105}, {105, 105}}, rotation = 0)));
+  Common.SulfurPort_b sulfurPort_b1 annotation(Placement(visible = true, transformation(origin = {597, -309}, extent = {{-37, -37}, {37, 37}}, rotation = 0), iconTransformation(origin = {100, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
-  connect(valves_4ways1.port_b1, baseReactor2.port_a) annotation(Line(points = {{-44, -29}, {176, -29}, {176, -63}}, color = {0, 127, 255}));
-  connect(basePipe4.port_b, valves_4ways1.port_a) annotation(Line(points = {{-187, -228}, {-112, -228}, {-112, 40}}, color = {0, 127, 255}));
+  connect(baseReactor2.sulfurPort_b1, sulfurPort_b1) annotation(Line(points = {{249, -305}, {588, -305}, {588, -310}, {588, -310}}));
+  connect(baseReactor1.sulfurPort_b1, sulfurPort_b1) annotation(Line(points = {{262, 148}, {536, 148}, {536, -314}, {578, -314}, {578, -304}, {578, -304}}));
+  connect(valves_4ways1.port_b1, baseReactor2.port_a) annotation(Line(points = {{-44, -29}, {-44, -49}, {186, -49}, {186, -137}}, color = {0, 127, 255}));
+  connect(baseReactor2.port_b, valves_4ways2.port_a) annotation(Line(points = {{186, -349}, {312, -349}, {312, 2}}, color = {0, 127, 255}));
+  connect(basePipe4.port_b, valves_4ways1.port_a) annotation(Line(points = {{-187, -228}, {-152, -228}, {-152, 40}, {-112, 40}}, color = {0, 127, 255}));
+  connect(valves_4ways2.port_b1, ports_b) annotation(Line(points = {{387, -71}, {598, -71}, {598, -8}, {598, -39.5}, {598, -8}}, color = {0, 127, 255}));
+  connect(valves_4ways2.port_b, ports_b) annotation(Line(points = {{460, 3}, {600, 3}, {600, 22}, {600, 22}}, color = {0, 127, 255}));
+  connect(baseReactor1.port_b, valves_4ways2.port_a1) annotation(Line(points = {{199, 104}, {388, 104}, {388, 76}, {388, 76}}, color = {0, 127, 255}));
   connect(valves_4ways1.port_b, baseReactor1.port_a) annotation(Line(points = {{24, 40}, {61.5, 40}, {61.5, 316}, {61, 316}, {61, 372}, {199, 372}, {199, 316}}, color = {0, 127, 255}));
   connect(basePipe3.port_b, valves_4ways1.port_a1) annotation(Line(points = {{-123, 254}, {-44, 254}, {-44, 107}}, color = {0, 127, 255}));
   connect(block_GasHeater1.port_b, basePipe4.port_a) annotation(Line(points = {{-308, -233}, {-285, -233}, {-285, -228}}, color = {0, 127, 255}));

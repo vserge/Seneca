@@ -15,8 +15,8 @@ model Block_Prep_ASIDGAS
   Modelica.Fluid.Vessels.ClosedVolume vassel_L2_T501_0(V = 5.76, nPorts = 3, use_portsData = true, use_Re = false) "Брызгоуловитель" annotation(Placement(visible = true, transformation(origin = {-338, 34}, extent = {{-72, -72}, {72, 72}}, rotation = 0)));
   //Разделитель жидкости и газа (брызгоуловитель)
   /*
-                                                                                                  Здесь должен быть датчик уровня жидкости нужно его вытащить из модели model PartialLumpedVessel
-                                                                                                */
+                                                                                                                                                                                                                              Здесь должен быть датчик уровня жидкости нужно его вытащить из модели model PartialLumpedVessel
+                                                                                                                                                                                                                            */
   Modelica.Fluid.Valves.ValveLinear valveLinear1 annotation(Placement(visible = true, transformation(origin = {-495, -231}, extent = {{-31, -31}, {31, 31}}, rotation = -90)));
   Pipes.BasePipe pipe_L2_C501_T501_0 annotation(Placement(visible = true, transformation(origin = {-155, -39}, extent = {{-49, -49}, {49, 49}}, rotation = 0)));
   Pipes.BasePipe pipe_L2_C501_BSW_0 annotation(Placement(visible = true, transformation(origin = {-498, -122}, extent = {{-36, -36}, {36, 36}}, rotation = -90)));
