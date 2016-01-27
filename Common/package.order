@@ -7,3 +7,11 @@ PartialTwoPort
 SulfurPort_a
 SulfurPort_b
 SulfurPorts_a
+BaseMoistAir
+BaseReferenceAir
+DataRecord
+MassFlowACIDGAS_Source_h
+MassFlowACIDGAS_Source_T
+System
+Type_ACID_GAS
+Ex_SingleGasesData
