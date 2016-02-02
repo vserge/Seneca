@@ -1,0 +1,11 @@
+record DataRecord "Coefficient data record for properties of ideal gases based on NASA source"
+String name "Name of ideal gas";
+  SI.MolarMass MM "Molar mass";
+  SI.SpecificEnthalpy Hf "Enthalpy of formation at 298.15K";
+  SI.SpecificEnthalpy H0 "H0(298.15K) - H0(0K)";
+  SI.Temperature Tlimit "Temperature limit between low and high data sets";
+  Real alow[7] "Low temperature coefficients a";
+  Real blow[2] "Low temperature constants b";
+  Real ahigh[7] "High temperature coefficients a";
+  Real bhigh[2] "High temperature constants b";
+  SI.SpecificHeatCapacity R "Gas constant";
