@@ -10,19 +10,19 @@ model BaseCondenser
   Common.SulfurPort_b sulfurPort_b1 annotation(Placement(visible = true, transformation(origin = {90, -56}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {90, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   replaceable model HeatTransfer = Modelica.Fluid.Pipes.BaseClasses.HeatTransfer.IdealFlowHeatTransfer constrainedby Modelica.Fluid.Pipes.BaseClasses.HeatTransfer.PartialFlowHeatTransfer "Теплообмен между стенками конденсатора и газом" annotation(Placement(visible = true, transformation(origin = {-50, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   /* Для расчета толщины вязкого полслоя в соответствии с http://studopedia.ru/2_122985_gidravlicheski-gladkie-i-sherohovatie-trubi.html
-                                                                                             введем параметр, которые необходимо будет определить для материала, из которого сделан конденсатор (точнее внутренняя поверхность
-                                                                                             
-                                                                                             При этом для эквивалентной шероковатости принимается значение по умолчанию как для новых стальных сварных труб (максимальный уровень)
-                                                                                             */
+                                                                                                           введем параметр, которые необходимо будет определить для материала, из которого сделан конденсатор (точнее внутренняя поверхность
+                                                                                                           
+                                                                                                           При этом для эквивалентной шероковатости принимается значение по умолчанию как для новых стальных сварных труб (максимальный уровень)
+                                                                                                           */
   parameter Real delta_ekv(start = 0.1, unit = "mm") "Эквивалентная шероховатость" annotation(Dialog(tab = "Ограничение", group = "Вязкость потока"));
   parameter SI.Length D "Характеристика размерности (гидравлический диаметр трубы или отверстие)" annotation(Dialog(tab = "Ограничение", group = "Вязкость потока"));
   parameter SI.Diameter diameter "Диаметр конденсатора" annotation(Dialog(group = "Геометрия", enable = isCircular));
   Real Re_skin_layer "Число Рейнольдска для вязкого подслоя";
   Real Re_main_layer "Число Рейнольдска для основного центрального слоя";
   /*
-                                                                расчетные переменные, которые ввел Андрей Кругликов. Перенесены из его модели
-                                                                Зона два
-                                                                */
+                                                                              расчетные переменные, которые ввел Андрей Кругликов. Перенесены из его модели
+                                                                              Зона два
+                                                                              */
   // extends Pipe;
   // Объявление потока
   //Gas_Flow fl = in_condenser_II.mf;
@@ -84,9 +84,9 @@ model BaseCondenser
   Real Mf;
   Real T_out;
   /*
-                                                                расчетные переменные, которые ввел Андрей Кругликов. Перенесены из его модели
-                                                                Зона три
-                                                                */
+                                                                              расчетные переменные, которые ввел Андрей Кругликов. Перенесены из его модели
+                                                                              Зона три
+                                                                              */
   Integer n = 610;
   Integer k = 130;
   Real j[n, k, 10] = in_condenser_III.J;
