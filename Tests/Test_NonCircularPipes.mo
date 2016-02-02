@@ -1,8 +1,9 @@
 within Seneca.Tests;
 
-class Test_NonCircularPipes "Comparing a circular with a non-circular pipe"
-  import Modelica.Icons.Example;
-  extends Modelica.Icons.Example;
+model Test_NonCircularPipes "Comparing a circular with a non-circular pipe"
+  //    import Modelica.Icons.Example;
+  // extends Modelica.Icons.Example;
+  import Modelica.Fluid;
   constant Real odim = 0.015;
   constant Real idim = 0.005;
   inner Modelica.Fluid.System system(energyDynamics = Modelica.Fluid.Types.Dynamics.FixedInitial) annotation(Placement(visible = true, transformation(origin = {-80, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
