@@ -3,7 +3,9 @@ within Seneca.Valve;
 model valves_4ways
   import Modelica.Fluid.Types.CvTypes;
   import Modelica.Fluid.Valves.BaseClasses;
-  extends Modelica.Fluid.Interfaces.PartialTwoPortTransport(dp_start = dp_nominal, m_flow_small = if system.use_eps_Re then system.eps_m_flow * m_flow_nominal else system.m_flow_small, m_flow_start = m_flow_nominals);
+  import SI=Modelica.SIunits;
+  
+  extends Modelica.Fluid.Interfaces.PartialTwoPortTransport(redeclare replaceble medium = Medium, dp_start = dp_nominal, m_flow_small = if system.use_eps_Re then system.eps_m_flow * m_flow_nominal else system.m_flow_small, m_flow_start = m_flow_nominals);
   parameter Modelica.Fluid.Types.CvTypes CvData = Modelica.Fluid.Types.CvTypes.OpPoint "Выбор коэффициента расхода" annotation(Dialog(group = "Коэффициент расхода"));
   parameter SI.Area Av(fixed = if CvData == Modelica.Fluid.Types.CvTypes.Av then true else false, start = m_flow_nominal / sqrt(rho_nominal * dp_nominal) * valveCharacteristic(opening_nominal)) "Av (metric) flow coefficient" annotation(Dialog(group = "Flow Coefficient", enable = CvData == Modelica.Fluid.Types.CvTypes.Av));
   parameter Real Kv = 0 "Kv (metric) flow coefficient [m3/h]" annotation(Dialog(group = "Flow Coefficient", enable = CvData == Modelica.Fluid.Types.CvTypes.Kv));
