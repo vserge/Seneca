@@ -1,16 +1,16 @@
 /*
  * MATLAB Compiler: 4.18 (R2012b)
- * Date: Thu Jan 21 17:01:48 2016
- * Arguments: "-B" "macro_default" "-W" "lib:lib_react" "-T" "link:lib" "-d"
- * "D:\MATLAB\19.01.15\lib_react\src" "-w" "enable:specified_file_mismatch"
- * "-w" "enable:repeated_file" "-w" "enable:switch_ignored" "-w"
+ * Date: Sat Jan 23 12:18:56 2016
+ * Arguments: "-B" "macro_default" "-W" "lib:lib_summ" "-T" "link:lib" "-d"
+ * "D:\Qt\shared_train\src" "-w" "enable:specified_file_mismatch" "-w"
+ * "enable:repeated_file" "-w" "enable:switch_ignored" "-w"
  * "enable:missing_lib_sentinel" "-w" "enable:demo_license" "-v"
- * "D:\MATLAB\19.01.15\PDE_conc.m" "D:\MATLAB\19.01.15\pressure.m" 
+ * "D:\MATLAB\19.01.15\summ.m" 
  */
 
 #include <stdio.h>
-#define EXPORTING_lib_react 1
-#include "lib_react.h"
+#define EXPORTING_lib_summ 1
+#include "lib_summ.h"
 
 static HMCRINSTANCE _mcr_inst = NULL;
 
@@ -20,8 +20,10 @@ static HMCRINSTANCE _mcr_inst = NULL;
 #undef EXTERN_C
 #endif
 #include <windows.h>
+#include <stdbool.h>
 
-static char path_to_dll[_MAX_PATH];
+static int _MAX_PATH = 256;
+static char path_to_dll[_MAX_PATH] = "shared_train/src/";
 
 BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, void *pv)
 {
@@ -71,12 +73,12 @@ static int mclDefaultErrorHandler(const char *s)
 /* This symbol is defined in shared libraries. Define it here
  * (to nothing) in case this isn't a shared library. 
  */
-#ifndef LIB_lib_react_C_API
-#define LIB_lib_react_C_API /* No special import/export declaration */
+#ifndef LIB_lib_summ_C_API
+#define LIB_lib_summ_C_API /* No special import/export declaration */
 #endif
 
-LIB_lib_react_C_API 
-bool MW_CALL_CONV lib_reactInitializeWithHandlers(
+LIB_lib_summ_C_API 
+bool MW_CALL_CONV lib_summInitializeWithHandlers(
     mclOutputHandlerFcn error_handler,
     mclOutputHandlerFcn print_handler)
 {
@@ -85,7 +87,7 @@ bool MW_CALL_CONV lib_reactInitializeWithHandlers(
     return true;
   if (!mclmcrInitialize())
     return false;
-  if (!GetModuleFileName(GetModuleHandle("lib_react"), path_to_dll, _MAX_PATH))
+  if (!GetModuleFileName(GetModuleHandle("lib_summ"), path_to_dll, _MAX_PATH))
     return false;
     {
         mclCtfStream ctfStream = 
@@ -105,21 +107,21 @@ bool MW_CALL_CONV lib_reactInitializeWithHandlers(
   return true;
 }
 
-LIB_lib_react_C_API 
-bool MW_CALL_CONV lib_reactInitialize(void)
+LIB_lib_summ_C_API 
+bool MW_CALL_CONV lib_summInitialize(void)
 {
-  return lib_reactInitializeWithHandlers(mclDefaultErrorHandler, mclDefaultPrintHandler);
+  return lib_summInitializeWithHandlers(mclDefaultErrorHandler, mclDefaultPrintHandler);
 }
 
-LIB_lib_react_C_API 
-void MW_CALL_CONV lib_reactTerminate(void)
+LIB_lib_summ_C_API 
+void MW_CALL_CONV lib_summTerminate(void)
 {
   if (_mcr_inst != NULL)
     mclTerminateInstance(&_mcr_inst);
 }
 
-LIB_lib_react_C_API 
-void MW_CALL_CONV lib_reactPrintStackTrace(void) 
+LIB_lib_summ_C_API 
+void MW_CALL_CONV lib_summPrintStackTrace(void) 
 {
   char** stackTrace;
   int stackDepth = mclGetStackTrace(&stackTrace);
@@ -133,27 +135,15 @@ void MW_CALL_CONV lib_reactPrintStackTrace(void)
 }
 
 
-LIB_lib_react_C_API 
-bool MW_CALL_CONV mlxPDE_conc(int nlhs, mxArray *plhs[], int nrhs, mxArray *prhs[])
+LIB_lib_summ_C_API 
+bool MW_CALL_CONV mlxSumm(int nlhs, mxArray *plhs[], int nrhs, mxArray *prhs[])
 {
-  return mclFeval(_mcr_inst, "PDE_conc", nlhs, plhs, nrhs, prhs);
+  return mclFeval(_mcr_inst, "summ", nlhs, plhs, nrhs, prhs);
 }
 
-LIB_lib_react_C_API 
-bool MW_CALL_CONV mlxPressure(int nlhs, mxArray *plhs[], int nrhs, mxArray *prhs[])
+LIB_lib_summ_C_API 
+bool MW_CALL_CONV mlfSumm(int nargout, mxArray** s, mxArray* a, mxArray* b)
 {
-  return mclFeval(_mcr_inst, "pressure", nlhs, plhs, nrhs, prhs);
-}
-
-LIB_lib_react_C_API 
-bool MW_CALL_CONV mlfPDE_conc()
-{
-  return mclMlfFeval(_mcr_inst, "PDE_conc", 0, 0, 0);
-}
-
-LIB_lib_react_C_API 
-bool MW_CALL_CONV mlfPressure(int nargout, mxArray** f, mxArray* T)
-{
-  return mclMlfFeval(_mcr_inst, "pressure", nargout, 1, 1, f, T);
+  return mclMlfFeval(_mcr_inst, "summ", nargout, 1, 2, s, a, b);
 }
 
