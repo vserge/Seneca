@@ -4,6 +4,7 @@ within Seneca.Common;
 */
 model EquilibriumDrumBoiler
   "Простейший испаритель с двумя состояними, см. Astroem, Bell: Drum-boiler dynamics, Automatica 36, 2000, pp.363-378"
+  import SI=Modelica.SIunits;
   extends Modelica.Fluid.Interfaces.PartialTwoPort(
     final port_a_exposesState=true,
     final port_b_exposesState=true,

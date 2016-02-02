@@ -1,4 +1,4 @@
-within Seneca.Common;
+within Seneca.Interfaces;
 
 model PartialTwoPort
   import Modelica.Icons;
